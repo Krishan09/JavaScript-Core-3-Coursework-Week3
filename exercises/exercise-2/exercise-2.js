@@ -70,3 +70,27 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//TASK 1
+function getGryffindorWiz(wizards) {
+  //accessing firstName, lastName & house keys for each obj elem
+  wizards.forEach(({ firstName, lastName, house }) => {
+    if (house === "Gryffindor") {
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+getGryffindorWiz(hogwarts);
+
+//TASK 2
+function getTeacherWitPet(wizards) {
+  wizards.forEach(({ firstName, lastName, pet, occupation }) => {
+    //if pet has value, and occupation is teacher, logs full name 
+    if (pet !== null && occupation === "Teacher") {
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+getTeacherWitPet(hogwarts);
